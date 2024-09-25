@@ -1,59 +1,76 @@
-.card {
-  border: 1px solid #ddd; /* Borda leve ao redor do card */
-  border-radius: 10px; /* Bordas arredondadas */
-  width: 300px; /* Largura do card */
-  overflow: hidden; /* Impede que o conteúdo ultrapasse as bordas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para elevação */
-  transition: transform 0.2s ease; /* Transição suave no hover */
-  font-family: Arial, sans-serif; /* Fonte padrão */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // min-height: 100vh;
 }
-
-/* Estilo ao passar o mouse sobre o card */
-.card:hover {
-  transform: translateY(-10px); /* Elevação suave ao passar o mouse */
+.card-title {
+  color: #e9a209;
+  font-size: 1.563rem;
 }
-
-/* Imagem do produto */
-.product-image {
-  width: 100%; /* Imagem ocupa toda a largura do card */
-  height: 200px; /* Altura fixa */
-  object-fit: cover; /* Faz a imagem se ajustar sem distorção */
+.card-subtitle {
+  font-size: 2.1875rem;
 }
-
-/* Conteúdo dentro do card */
-.card-content {
+#cube_container {
+  width: 100%;
+  display: flex;
+  // background-color: #e9a209;
+  justify-content: center;
+  gap: 24px;
+}
+#cube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  gap: 18px;
+  width: 25%;
   padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cube-heart {
+  position: absolute;
+  background-color: #e9a209;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.53rem;
+  color: #fff9ea;
+  width: 70px;
+  height: 70px;
+  right: -10px;
+  top: -10px;
+  border-radius: 0px 37.5px 0 42.5px;
+}
+
+.cube-description {
+  color: #434343;
   text-align: center;
 }
-
-/* Nome do produto */
-.product-name {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #333;
+.cube-rate {
+  color: #e9a209;
 }
-
-/* Preço do produto */
-.product-price {
-  font-size: 22px;
-  color: #4caf50; /* Verde para destacar o preço */
-  margin: 10px 0;
+.cube-price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-
-/* Estilos do botão "Adicionar ao Carrinho" */
-.add-to-cart-btn {
-  background-color: #4caf50; /* Cor verde do botão */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  text-align: center;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+@media screen and (max-width: 1170px) {
+  #cube_container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #cube {
+    width: calc(50% - 12px);
+  }
 }
-
-/* Efeito de hover no botão */
-.add-to-cart-btn:hover {
-  background-color: #45a049; /* Cor um pouco mais escura ao passar o mouse */
+@media screen and (max-width: 600px) {
+  #cube {
+    width: 100%;
+  }
 }
