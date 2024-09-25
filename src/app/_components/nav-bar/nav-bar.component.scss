@@ -1,57 +1,66 @@
 .header {
-  top: 0;
-  left: 0;
   width: 100%;
-  box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
+  padding: 28px 8%;
 }
-.nav {
+.navbar {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+}
+#nav_logo {
+  font-size: 24px;
+  color: #e9a209;
+}
+#nav_list {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #1d1d1dad;
+  font-weight: 600;
 }
 
-.nav__logo {
-  color: black;
-  font-weight: bold;
-  transition: color 0.4s;
+.nav-item.active a {
+  color: #1d1d1d;
+  border-bottom: 3px solid #ffe100;
 }
-.cart_btn {
-  // background-color: #007bff;
-  border: none;
-  // color: white;
-  // padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  // border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+
+#mobile_btn {
+  display: none;
 }
-input[type="text"] {
-  // width: 100%; /* Faz o input ocupar 100% da largura do contêiner */
-  max-width: 400px; /* Define uma largura máxima */
-  padding: 12px 20px; /* Espaçamento interno */
-  margin: 8px 0; /* Margem para separar de outros elementos */
-  box-sizing: border-box; /* Inclui o padding na largura total */
-  border: 2px solid #ccc; /* Borda com cor clara */
-  border-radius: 15px; /* Bordas arredondadas */
-  background-color: #f9f9f9; /* Cor de fundo */
-  font-size: 16px; /* Tamanho da fonte */
-  transition: 0.3s; /* Transição suave para hover e foco */
-  outline: none; /* Remove o contorno padrão ao focar no input */
+#mobile_menu {
+  display: none;
 }
-input[type="text"]:focus {
-  border-color: #4caf50; /* Muda a cor da borda ao focar */
-  background-color: #fff; /* Cor de fundo branco ao focar */
-  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Efeito de sombra */
-}
-.nav__links {
-  background-color: rgb(235, 230, 230);
-  padding: 20px;
-}
-.nav__links a {
-  padding-right: 20px;
+
+@media screen and (max-width: 1170px) {
+  #nav_list,
+  .navbar .btn-default {
+    display: none;
+  }
+  #mobile_btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  #mobile_menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0px;
+  }
+  #mobile_nav_list .nav-item {
+    list-style: none;
+    text-align: center;
+  }
 }
