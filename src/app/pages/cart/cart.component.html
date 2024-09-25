@@ -1,0 +1,23 @@
+<app-nav-bar />
+<section class="shopping-cart">
+  <h2 class="cart-title">Carrinho de Compras</h2>
+
+  <ul class="cart-item-list">
+    @for (item of getProduct(); track item) {
+
+    <li class="cart-item">
+      <img [src]="item.src" alt="img name" class="cart-item-image">
+      <div class="cart-item-details">
+        <h3 class="cart-item-name">{{item.title}}</h3>
+        <p class="cart-item-price">{{item.price}}</p>
+        <button (click)="removeProduct(item)" class="remove-item-btn">Remover</button>
+      </div>
+    </li>
+    }
+  </ul>
+
+  <div class="cart-summary">
+    <p>Total: {{getTotalPrice() }}</p>
+    <button class="checkout-btn">Finalizar Compra</button>
+  </div>
+</section>

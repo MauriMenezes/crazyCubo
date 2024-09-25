@@ -26,9 +26,9 @@
             <span>(500+)</span>
           </div>
           <div class="cube-price">
-            <h4>{{item.price}}</h4>
-            <button class="btn-default">
-              <i class="fa-solid fa-basket-shopping"></i>
+            <h4>R$ {{item.price}} </h4>
+            <button (click)="addToCart(item)" class="add-to-cart-btn">
+              Add to Cart
             </button>
           </div>
         </div>
