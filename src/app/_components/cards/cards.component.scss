@@ -1,0 +1,59 @@
+.card {
+  border: 1px solid #ddd; /* Borda leve ao redor do card */
+  border-radius: 10px; /* Bordas arredondadas */
+  width: 300px; /* Largura do card */
+  overflow: hidden; /* Impede que o conteúdo ultrapasse as bordas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para elevação */
+  transition: transform 0.2s ease; /* Transição suave no hover */
+  font-family: Arial, sans-serif; /* Fonte padrão */
+}
+
+/* Estilo ao passar o mouse sobre o card */
+.card:hover {
+  transform: translateY(-10px); /* Elevação suave ao passar o mouse */
+}
+
+/* Imagem do produto */
+.product-image {
+  width: 100%; /* Imagem ocupa toda a largura do card */
+  height: 200px; /* Altura fixa */
+  object-fit: cover; /* Faz a imagem se ajustar sem distorção */
+}
+
+/* Conteúdo dentro do card */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Nome do produto */
+.product-name {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Preço do produto */
+.product-price {
+  font-size: 22px;
+  color: #4caf50; /* Verde para destacar o preço */
+  margin: 10px 0;
+}
+
+/* Estilos do botão "Adicionar ao Carrinho" */
+.add-to-cart-btn {
+  background-color: #4caf50; /* Cor verde do botão */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no botão */
+.add-to-cart-btn:hover {
+  background-color: #45a049; /* Cor um pouco mais escura ao passar o mouse */
+}
