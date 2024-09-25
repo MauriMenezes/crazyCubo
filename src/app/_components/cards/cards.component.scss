@@ -3,34 +3,58 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // min-height: 100vh;
+  width: 100%;
+  padding: 20px;
 }
+
 .card-title {
   color: #e9a209;
-  font-size: 1.563rem;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
+
 .card-subtitle {
-  font-size: 2.1875rem;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
+
 #cube_container {
   width: 100%;
   display: flex;
-  // background-color: #e9a209;
-  justify-content: center;
-  gap: 24px;
+  flex-wrap: wrap; /* Permitir que os cards se movam para a próxima linha */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  gap: 24px; /* Espaçamento entre os cards */
 }
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.card-item {
+  flex: 1 1 calc(25% - 24px); /* Cada card ocupa 25% da largura menos a margem */
+  max-width: 300px; /* Define a largura máxima do card */
+  margin: 12px; /* Margem para espaçamento */
+}
+
 #cube {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 20px;
-  gap: 18px;
-  width: 25%;
+  border-radius: 10px;
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#cube:hover {
+  transform: translateY(-5px);
 }
 
 .cube-heart {
@@ -39,38 +63,95 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.53rem;
+  font-size: 1.5rem;
   color: #fff9ea;
-  width: 70px;
-  height: 70px;
-  right: -10px;
-  top: -10px;
-  border-radius: 0px 37.5px 0 42.5px;
+  width: 40px;
+  height: 40px;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+}
+
+.cube-img {
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.cube-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .cube-description {
   color: #434343;
   text-align: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
 }
+
 .cube-rate {
   color: #e9a209;
-}
-.cube-price {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
+
+.cube-rate i {
+  font-size: 1rem;
+}
+
+.cube-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.cube-price h4 {
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.btn-default {
+  background-color: #e9a209;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-default i {
+  margin-right: 5px;
+}
+
+.btn-default:hover {
+  background-color: #d18a08;
+}
+
 @media screen and (max-width: 1170px) {
-  #cube_container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  #cube {
-    width: calc(50% - 12px);
+  .card-item {
+    flex: 1 1 calc(50% - 24px); /* 50% da largura para telas menores */
   }
 }
-@media screen and (max-width: 600px) {
-  #cube {
-    width: 100%;
+
+@media screen and (max-width: 768px) {
+  .card-item {
+    flex: 1 1 calc(100% - 24px); /* Full width em telas pequenas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-item {
+    flex: 1 1 calc(100% - 24px); /* Full width em dispositivos móveis */
   }
 }
