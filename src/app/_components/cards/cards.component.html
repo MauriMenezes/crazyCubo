@@ -22,8 +22,8 @@
           </div>
           <div class="cube-price">
             <h4>R$ {{getFormattedPrice(price)}} </h4>
-            <!-- (click)="addToCart(id)" -->
-            <button class="add-to-cart-btn">{{id}} adicionar id</button>
+
+            <button (click)="addToCartById(id) " class="add-to-cart-btn">Add to Cart</button>
           </div>
         </div>
       </li>

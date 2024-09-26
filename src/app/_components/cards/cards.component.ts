@@ -23,9 +23,9 @@ export class CardsComponent {
 
   constructor(private cartService: CartService) { }
 
-  addToCart(product: Iproduct) {
-    this.cartService.addToCart(product);
-    window.alert(`Seu pedido INFO é ${product}`);
+  addToCartById(id: any) {
+    this.cartService.addToCart(this.id);
+    window.alert(`pedido adicionado ao carrinho`);
   }
   getAll() {
     let prod = this.cartService.getItems();
