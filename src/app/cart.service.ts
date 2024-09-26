@@ -39,6 +39,15 @@ export class CartService {
       total += element.price;
     }
     return total;
-
   }
+  verifyCart(productId: number) {
+
+    const alreadyIncart = this.items.find(item => item.id === productId);
+
+    if (alreadyIncart) {
+      return 2;
+    }
+    return 1;
+  }
+
 }

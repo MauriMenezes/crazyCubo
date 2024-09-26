@@ -12,8 +12,10 @@ import { Iproduct } from '../../interface/Iproduct';
 })
 export class CartComponent {
 
-  constructor(private cartService: CartService) { }
 
+
+  constructor(private cartService: CartService) { }
+  contador = 0;
 
   getProduct() {
     return this.cartService.getItems();
@@ -29,4 +31,7 @@ export class CartComponent {
   getFormattedPrice(price: number): string {
     return price.toFixed(2).replace('.', ',');
   }
+  addProduct(product: Iproduct) {
+    this.contador += this.cartService.verifyCart(product.id);
+  };
 }

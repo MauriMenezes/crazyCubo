@@ -54,11 +54,11 @@
   width: 96%;
 }
 
-.quantity input {
-  border: 1px solid #00000036;
-  border-radius: 5px;
-  width: 30px;
-  height: 22px;
+.quantity span {
+  align-self: center;
+}
+.quantity {
+  display: inline-flex;
 }
 
 .quantity button {
