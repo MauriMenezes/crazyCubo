@@ -1,1 +1,10 @@
 <app-nav-bar />
+<div>
+
+  <div id="cube_container">
+    <app-cards *ngFor="let item of data.accessories" [src]="item.src" [id]="item.id" [title]="item.title"
+      [description]="item.description" [price]="item.price">
+    </app-cards>
+  </div>
+</div>
+<app-footer />

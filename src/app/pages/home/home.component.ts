@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(this.data.arrayCube);
+    // console.log(this.data.arrayCube);
   }
 
 

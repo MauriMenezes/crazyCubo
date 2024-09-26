@@ -79,5 +79,47 @@
       "price": 125,
       "id": 2212
     }
+  ],
+  "accessories": [
+    {
+      "src": "assets/img/lubrificante.png",
+      "title": "Lubrificante SpeedCube Lube",
+      "description": "Lubrificante para cubo mágico, garantindo melhor performance e durabilidade.",
+      "currency": "R$",
+      "price": 25,
+      "id": 101
+    },
+    {
+      "src": "assets/img/bolsacubo.webp",
+      "title": "Bolsa para Cubo Mágico",
+      "description": "Bolsa compacta para transporte e proteção do seu cubo mágico.",
+      "currency": "R$",
+      "price": 40,
+      "id": 102
+    },
+    {
+      "src": "assets/img/timer.webp",
+      "title": "Timer Digital Qiyi",
+      "description": "Timer digital de alta precisão para medir o tempo de resolução do cubo mágico.",
+      "currency": "R$",
+      "price": 150,
+      "id": 103
+    },
+    {
+      "src": "assets/img/tapete.webp",
+      "title": "Tapete SpeedCube",
+      "description": "Tapete antiderrapante para cubo mágico, ideal para competições.",
+      "currency": "R$",
+      "price": 70,
+      "id": 104
+    },
+    {
+      "src": "assets/img/adesivo.webp",
+      "title": "Adesivos para Cubo 3x3",
+      "description": "Conjunto de adesivos para customizar seu cubo mágico 3x3.",
+      "currency": "R$",
+      "price": 20,
+      "id": 105
+    }
   ]
 }

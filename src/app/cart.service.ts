@@ -13,10 +13,14 @@ export class CartService {
   constructor() { }
 
   addToCart(productId: any) {
+    const productCube = this.data.arrayCube.find((product: { id: any; }) => product.id === productId);
+    const productAccessories = this.data.accessories.find((product: { id: any; }) => product.id === productId);
 
-    const product = this.data.arrayCube.find((product: { id: any; }) => product.id === productId);
-
-    this.items.push(product);
+    if (productCube) {
+      this.items.push(productCube);
+    } else if (productAccessories) {
+      this.items.push(productAccessories);
+    }
   }
   getItems() {
     console.log(this.items);
