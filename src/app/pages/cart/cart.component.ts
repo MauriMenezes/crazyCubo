@@ -26,4 +26,7 @@ export class CartComponent {
     this.cartService.removeFromCart(product);
     this.getTotalPrice();
   }
+  getFormattedPrice(price: number): string {
+    return price.toFixed(2).replace('.', ',');
+  }
 }

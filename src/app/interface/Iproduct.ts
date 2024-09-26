@@ -4,6 +4,7 @@ export interface Iproduct {
   description: string,
   currency: string,
   price: number;
+  id: number;
 
 
 }

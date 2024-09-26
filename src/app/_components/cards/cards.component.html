@@ -1,12 +1,7 @@
 <section class="cards-container">
 
-  <h2 class="card-title"> Cubos</h2>
-  <h3 class="card-subtitle">Destaques</h3>
-
   <div id="cube_container">
     <ul class="card-list">
-
-      @for (item of arrayCube(); track item) {
 
       <li class="card-item">
         <div id="cube">
@@ -14,9 +9,9 @@
             <i class="fa-solid fa-heart">
             </i>
           </div>
-          <img [src]="item.src" alt="" height="120px" width="" class="cube-img" />
-          <h3 class="cube-title">{{item.title}}</h3>
-          <span class="cube-description">{{item.description}} </span>
+          <img [src]="src" alt="" height="120px" width="" class="cube-img" />
+          <h3 class="cube-title">{{title}}</h3>
+          <span class="cube-description">{{description}} </span>
           <div class="cube-rate">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -26,14 +21,13 @@
             <span>(500+)</span>
           </div>
           <div class="cube-price">
-            <h4>R$ {{item.price}} </h4>
-            <button (click)="addToCart(item)" class="add-to-cart-btn">
-              Add to Cart
-            </button>
+            <h4>R$ {{getFormattedPrice(price)}} </h4>
+            <!-- (click)="addToCart(id)" -->
+            <button class="add-to-cart-btn">{{id}} adicionar id</button>
           </div>
         </div>
       </li>
-      }
+
     </ul>
   </div>
 

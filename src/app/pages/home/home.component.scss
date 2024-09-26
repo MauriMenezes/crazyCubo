@@ -1,0 +1,6 @@
+#cube_container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  width: 100%;
+}

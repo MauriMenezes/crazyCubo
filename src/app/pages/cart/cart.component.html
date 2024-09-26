@@ -9,15 +9,27 @@
       <img [src]="item.src" alt="img name" class="cart-item-image">
       <div class="cart-item-details">
         <h3 class="cart-item-name">{{item.title}}</h3>
-        <p class="cart-item-price">{{item.price}}</p>
-        <button (click)="removeProduct(item)" class="remove-item-btn">Remover</button>
+
+        <div class="cart-item-price-container">
+          <p class="cart-item-price">R$ {{getFormattedPrice(item.price)}} </p>
+          <div class="quantity">
+            <button class="minus">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <input type="number" disabled>
+            <button class="plus">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <button (click)="removeProduct(item)" class="remove-item-btn"><i class="fa-regular fa-trash-can"></i></button>
+        </div>
       </div>
     </li>
     }
   </ul>
 
   <div class="cart-summary">
-    <p>Total: {{getTotalPrice() }}</p>
+    <p>Total: R$ {{getFormattedPrice(getTotalPrice())}}</p>
     <button class="checkout-btn">Finalizar Compra</button>
   </div>
 </section>

@@ -8,7 +8,7 @@
 }
 
 .card-title {
-  color: #e9a209;
+  color: #464575;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -59,7 +59,7 @@
 
 .cube-heart {
   position: absolute;
-  background-color: #e9a209;
+  background-color: #4264ffeb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,6 +70,11 @@
   right: 10px;
   top: 10px;
   border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    background-color: #7c92f5ec;
+    color: #ff0d0d;
+  }
 }
 
 .cube-img {
@@ -97,6 +102,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .cube-rate i {
@@ -105,7 +111,7 @@
 
 .cube-price {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   margin-top: 15px;
@@ -131,7 +137,7 @@
 }
 
 .add-to-cart-btn {
-  background-color: #84ff6b;
+  background-color: #4264ffeb;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -142,7 +148,9 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: #ff4e42;
+  background-color: #84ff6b;
+  color: #000;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1170px) {
